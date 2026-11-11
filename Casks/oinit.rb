@@ -20,7 +20,7 @@ cask "oinit" do
   manpage "man/oinit.1"
   manpage "man/oinit_hosts.5"
 
-  postflight do
+  postflight_steps do
     # The binary is unsigned (no Apple Developer ID); drop the Gatekeeper
     # quarantine attribute so it runs without "cannot be opened".
     if OS.mac?
